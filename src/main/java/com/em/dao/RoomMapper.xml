@@ -6,9 +6,8 @@
         SELECT count(*) FROM room
     </select>
 
-    <select id="findByPaging" parameterType="com.em.domain.PagingVO" resultType="com.em.domain.Room">
+    <select id="findByPaging" resultType="com.em.domain.Room">
         SELECT * FROM room
-        limit #{toPageNo}, #{pageSize}
     </select>
 
     <insert id="add" parameterType="com.em.domain.Room">

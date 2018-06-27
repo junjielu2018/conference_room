@@ -28,6 +28,26 @@
         <property name="configLocation" value="classpath:SqlMapConfig.xml"/>
         <!--指定会话工厂使用的数据库连接池-->
         <property name="dataSource" ref="dataSource"/>
+
+        <!-- 注意其他配置 -->
+        <property name="plugins">
+            <array>
+                <bean class="com.github.pagehelper.PageInterceptor">
+                    <property name="properties">
+                        <!--使用下面的方式配置参数，一行配置一个 -->
+                        <value>
+                            helperDialect=mysql
+                            reasonable=true
+                            supportMethodsArguments=true
+                            params=count=countSql
+                            autoRuntimeDialect=true
+                            rowBoundsWithCount=true
+                        </value>
+                    </property>
+                </bean>
+            </array>
+        </property>
+
     </bean>
 
     <!--Mapper接口代理(动态代理)方式实现Spring-Mybatis整合-->
@@ -37,4 +57,5 @@
         <!--指定需要扫描的包的全路径名称，如果有多个包，用英文输入法状态下的逗号分隔。-->
         <property name="basePackage" value="com.em.dao"/>
     </bean>
+
 </beans>

@@ -10,9 +10,9 @@
 	http://www.springframework.org/schema/tx
 	http://www.springframework.org/schema/tx/spring-tx.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <!--加载配置文件-->
-    <import resource="ApplicationContext-Dao.xml"></import>
-    <import resource="ApplicationContext-Trans.xml"></import>
-    <import resource="ApplicationContext-Service.xml"></import>
-    <import resource="ApplicationContext-Shiro.xml"></import>
+   <import resource="classpath:applicationContext-Dao.xml"></import>
+   <import resource="classpath:applicationContext-Service.xml"></import>
+   <import resource="classpath:applicationContext-Shiro.xml"></import>
+   <import resource="classpath:applicationContext-Trans.xml"></import>
+
 </beans>

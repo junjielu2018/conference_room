@@ -1,6 +1,7 @@
 package com.em.service;
 
 import com.em.domain.Room;
+import com.github.pagehelper.PageInfo;
 
 import java.util.List;
 
@@ -20,7 +21,7 @@ public interface RoomService {
      * @return
      * @throws Exception
      */
-    List<Room> findByPaging(Integer toPageNo) throws Exception;
+    PageInfo<Room> findByPaging(Integer toPageNo) throws Exception;
 
     /**
      * 添加会议室信息

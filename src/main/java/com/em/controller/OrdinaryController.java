@@ -7,6 +7,7 @@ import com.em.domain.Room;
 import com.em.service.ReservationService;
 import com.em.service.RoomService;
 import com.em.service.UserService;
+import com.github.pagehelper.PageInfo;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -36,7 +37,7 @@ public class OrdinaryController {
     @RequestMapping("/showRoom")
     public String showRoom(Model model, Integer page) throws Exception {
 
-        List<Room> list = null;
+        PageInfo<Room> list = null;
         //页码对象
         PagingVO pagingVO = new PagingVO();
         //设置总页数

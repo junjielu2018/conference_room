@@ -42,6 +42,10 @@ public class LoginController {
             e.printStackTrace();
             return "redirect:/login";
         }
-        return "redirect:/" + subject.getPrincipal() + "/showRoom";
+        if (subject.hasRole("admin")){
+            return "redirect:/admin/showRoom";
+        }else {
+            return "redirect:/ordinary/showRoom";
+        }
     }
 }

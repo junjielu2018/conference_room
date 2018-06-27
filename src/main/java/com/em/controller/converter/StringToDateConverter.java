@@ -13,7 +13,6 @@ import java.util.Date;
  * Created by lujunjie on 2018/6/26.
  */
 public class StringToDateConverter implements Converter<String,Date> {
-    @Override
     public Date convert(String source) {
         Date date=null;
         SimpleDateFormat dateFormat=new SimpleDateFormat("yyyy-MM-dd");

@@ -11,7 +11,7 @@ import java.util.List;
 public interface RoomMapper {
     public Integer roomCount();
 
-    public List<Room> findByPaging(PagingVO pagingVO) throws Exception;
+    public List<Room> findByPaging() throws Exception;
 
     public void add(Room room) throws Exception;
 
